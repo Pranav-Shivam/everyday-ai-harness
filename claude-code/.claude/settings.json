@@ -1,0 +1,37 @@
+{
+  "enableAllProjectMcpServers": true,
+  "permissions": {
+    "allow": [
+      "mcp__everyday__save_note",
+      "mcp__everyday__search_notes",
+      "mcp__everyday__add_task",
+      "mcp__everyday__list_tasks"
+    ],
+    "ask": [
+      "mcp__everyday__update_task_status"
+    ],
+    "deny": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "NotebookEdit",
+      "WebFetch",
+      "WebSearch",
+      "Agent"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "mcp__everyday__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/log_tool.py"
+          }
+        ]
+      }
+    ]
+  }
+}

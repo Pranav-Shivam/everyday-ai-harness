@@ -1,0 +1,27 @@
+[
+  {
+    "name": "save an explicitly requested note",
+    "input": "Please save this note for future reference: My weekly review is on Friday afternoon.",
+    "expected_tool": "save_note"
+  },
+  {
+    "name": "retrieve a saved note",
+    "input": "Search my saved notes and tell me when my weekly review is.",
+    "expected_tool": "search_notes"
+  },
+  {
+    "name": "add an explicitly requested task",
+    "input": "Add a task titled Review the harness project README.",
+    "expected_tool": "add_task"
+  },
+  {
+    "name": "mark a task done only on explicit request",
+    "input": "Mark task 1 as done.",
+    "expected_tool": "update_task_status"
+  },
+  {
+    "name": "list open tasks",
+    "input": "Show me my open tasks.",
+    "expected_tool": "list_tasks"
+  }
+]

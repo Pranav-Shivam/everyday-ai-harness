@@ -1,0 +1,21 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+data/
+logs/
+.DS_Store
+Thumbs.db
+
+# Secrets and local overrides
+.env.*
+!.env.example
+.claude/settings.local.json
+claude-code/.claude/settings.local.json
+*.sqlite3

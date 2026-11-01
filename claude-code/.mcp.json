@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "everyday": {
+      "command": "python",
+      "args": ["-m", "everyday_harness.mcp_server"],
+      "env": {
+        "HARNESS_DATABASE": "../data/harness.sqlite3"
+      }
+    }
+  }
+}
