@@ -143,7 +143,7 @@ class AgentHarness:
                             arguments = json.loads(call.function.arguments or "{}")
                         except json.JSONDecodeError:
                             arguments = None
-                        result = self.tools.execute(tool_name, arguments)
+                        result = self.tools.execute(tool_name, arguments, advertised_only=True)
 
                     messages.append(
                         {

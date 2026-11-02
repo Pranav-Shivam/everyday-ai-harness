@@ -5,10 +5,16 @@
       "mcp__everyday__save_note",
       "mcp__everyday__search_notes",
       "mcp__everyday__add_task",
-      "mcp__everyday__list_tasks"
+      "mcp__everyday__list_tasks",
+      "mcp__everyday__search_chats",
+      "mcp__everyday__list_chat_sessions",
+      "mcp__everyday__get_chat_session",
+      "mcp__everyday__get_chat_day",
+      "mcp__everyday__list_lessons"
     ],
     "ask": [
-      "mcp__everyday__update_task_status"
+      "mcp__everyday__update_task_status",
+      "mcp__everyday__save_lesson"
     ],
     "deny": [
       "Bash",
@@ -29,6 +35,16 @@
           {
             "type": "command",
             "command": "python .claude/hooks/log_tool.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/capture_chat.py"
           }
         ]
       }
